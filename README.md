@@ -7,6 +7,7 @@ To view the script outside MS word, open *FindReplaceAllFiles.bas* in any text e
 The setup just involves organizing the files as shown in SetupDiagram.png:
 * FindReplaceMacro.dotm in working directory
 * Have lookuptable.csv alongside the macro
+* Look-up table format should be two columns where the first is the find-strings and the second is the replace-strings - see lookuptable.csv in this repository for example
 * Make a directory titled **Files** alongside the macro and look-up table
 * **Files** directly contains all .docx files on which you wish to execute the find/replace operations
 * The look-up table file and file directory should not be renamed from this schema unless you want to edit the macro yourself
@@ -22,6 +23,6 @@ Openning the macro will appear to simply open a word document.  To run:
 * Select *findReplaceAllFiles* and press **Run**
 * **FilesWithSubs** will now contain the files with substitutions made. If the file name was in the substitution table, the file will be renamed according to the substitution.
 
-#### Possible Updates
+#### Possible Future Updates
 
 * Make algorithm recusively search subfolders of Files
