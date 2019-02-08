@@ -16,15 +16,12 @@ Sub findReplaceAllFiles()
     csv.Close
     
     file = Dir(PathName:=ThisDocument.Path & readpath)
-    Dim counter As Integer
-    counter = 1
     While file <> vbNullString
         ' Set new doc and initialize new filename
         Set doc = Documents.Open(filename:=ThisDocument.Path & readpath & file)
-        newfilename = "\untitled" & counter
-        counter = counter + 1
+        newfilename = file
         
-        ' Perform the find & replace for all elements in lookup table
+        ' Iterate through
         Dim i As Long
         For i = 1 To UBound(lookuptable)
             Dim find As String
@@ -37,6 +34,7 @@ Sub findReplaceAllFiles()
                 newfilename = replace
             End If
             
+            ' Perform the find & replace for all elements in lookup table, in Header, Footer, and Main
             doc.Windows(1).View.SeekView = wdSeekPrimaryHeader
             Call helpers.findreplace(find, replace)
             doc.Windows(1).View.SeekView = wdSeekMainDocument

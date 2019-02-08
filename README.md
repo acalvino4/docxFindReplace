@@ -1,5 +1,7 @@
 ## This is a macro that performs a series of find/replace operations on a collection of MS word documuments.
 
+To view the script outside MS word, open *FindReplaceAllFiles.bas* in any text editor
+
 #### Setup
 
 The setup just involves organizing the files as shown in SetupDiagram.png:
@@ -19,3 +21,7 @@ Openning the macro will appear to simply open a word document.  To run:
 * Click on **Macros** button on **Developer** tab
 * Select *findReplaceAllFiles* and press **Run**
 * **FilesWithSubs** will now contain the files with substitutions made. If the file name was in the substitution table, the file will be renamed according to the substitution.
+
+#### Possible Updates
+
+* Make algorithm recusively search subfolders of Files
