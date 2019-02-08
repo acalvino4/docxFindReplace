@@ -1,6 +1,6 @@
 ## This is a macro that performs a series of find/replace operations on a collection of MS word documuments.
 
-To view the script outside MS word, open *FindReplaceAllFiles.bas* in any text editor
+To view the script outside MS word, open *FindReplaceAllFiles.bas* and *helpers.bas* in any text editor
 
 #### Setup
 
