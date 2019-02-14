@@ -30,9 +30,12 @@ Sub findReplaceAllFiles()
             replace = lookuptable(i, 2)
             
             ' Set filename
-            If find & ".docx" = file Then
+            If InStr(file, find) = 1 Then
                 newfilename = replace
             End If
+'            If find & ".docx" = file Then
+'                newfilename = replace
+'            End If
             
             ' Perform the find & replace for all elements in lookup table, in Header, Footer, and Main
             doc.Windows(1).View.SeekView = wdSeekPrimaryHeader

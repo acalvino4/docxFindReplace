@@ -2,6 +2,10 @@
 
 To view the script outside MS word, open *FindReplaceAllFiles.bas* and *helpers.bas* in any text editor
 
+**Note:** *This branch is for a modified use case where the filename will be changed according to the look-up table whereever the filename __starts__ with a 'find' entry in the look-up table.*
+For example, if [oldString, newString] is a find/replace pair in the table, then __oldStringPlusSomeMoreText.docx__ with be renamed to __newString.docx__.
+This change is reflected in the .bas file
+
 #### Setup
 
 The setup just involves organizing the files as shown in SetupDiagram.png:
